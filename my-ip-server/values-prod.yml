@@ -1,10 +1,10 @@
 microservice:
   name: my-ip-server
   namespace: my-ip-app
-  replicas: 2
+  replicas: 1
   component: server
   appName: my-ip-app
-  secretName: my-ip-server-secret
+  secretName: my-ip-server-sealed-secret
 
 workload:
   image: scophee/my-ip-server:1.4

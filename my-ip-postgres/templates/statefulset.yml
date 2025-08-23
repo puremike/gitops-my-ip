@@ -24,7 +24,7 @@ spec:
         image: {{ .Values.workload.image }}
         envFrom:
           - secretRef:
-              name: "{{ .Values.microservice.name }}-secret"
+              name: {{ .Values.microservice.secretName }}
           - configMapRef:
               name: "{{ .Values.microservice.name }}-config"
         ports:

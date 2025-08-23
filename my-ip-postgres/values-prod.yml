@@ -4,7 +4,7 @@ microservice:
   replicas: 1
   component: database
   appName: my-ip-app
-  secretName: my-ip-postgres-secret
+  secretName: my-ip-postgres-sealed-secret
   
 workload:
   image: postgres:13.22-alpine3.22
