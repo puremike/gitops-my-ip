@@ -1,8 +1,5 @@
 using sealed-secret with kubeseal:
 
-install kubeseal: 
-
-
 Add the Bitnami repo:
 
 ```helm repo add bitnami https://charts.bitnami.com/bitnami```
@@ -15,4 +12,15 @@ Install:
 --set service.type=ClusterIP \
 --create-namespace```
 
+To install argoCD:
+
+```
+kubectl create namespace argocd
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+```
+
+To get default_password: 
+```
+kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.password}" | base64 -d; echo
+```
 

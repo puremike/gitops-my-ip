@@ -8,11 +8,11 @@ spec:
   rules:
     #- host: www.example.com
     - http:
-      paths:
-        - path: /
-          pathType: Prefix
-          backend:
-            service:
-              name: {{ .Values.microservice.name }}
-              port:
-                number: {{ .Values.workload.containerPort }}
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: {{ .Values.microservice.name }}
+                port:
+                  number: {{ .Values.workload.containerPort }}
