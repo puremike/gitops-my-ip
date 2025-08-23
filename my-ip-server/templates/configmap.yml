@@ -5,7 +5,6 @@ metadata:
   namespace: {{ .Values.microservice.namespace }}
 data:
     PORT: '8100'
-    FRONTEND_URL: 'http://my-ip-client:80'
     APP_ENV: 'production'
     DB_HOST: 'my-ip-postgres'
     DB_PORT: '5432'

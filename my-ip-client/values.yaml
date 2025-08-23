@@ -6,5 +6,5 @@ microservice:
   appName: my-ip-app
 
 workload:
-  image: scophee/my-ip-client:1.2
+  image: scophee/my-ip-client:1.5
   containerPort: 80
