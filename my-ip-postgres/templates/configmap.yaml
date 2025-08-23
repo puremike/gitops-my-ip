@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: "{{ .Values.microservice.name }}-config"
+  namespace: {{ .Values.microservice.namespace }}
+data:
+  POSTGRES_DB: 'my-ip-db'

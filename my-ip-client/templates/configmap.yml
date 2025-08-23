@@ -1,0 +1,7 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: "{{ .Values.microservice.name }}-config"
+  namespace: {{ .Values.microservice.namespace }}
+data:
+    API_BASE_URL: "http://my-ip-server:8100/v1"

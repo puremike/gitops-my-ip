@@ -1,0 +1,11 @@
+microservice:
+  name: my-ip-server
+  namespace: my-ip-app
+  replicas: 2
+  component: server
+  appName: my-ip-app
+
+workload:
+  image: scophee/my-ip-server:1.3
+  containerPort: 8100
+  

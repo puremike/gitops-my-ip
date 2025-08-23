@@ -1,0 +1,8 @@
+apiVersion: v2
+name: my-ip-server
+description: A Helm chart for deploying my-ip-server application
+
+type: application
+
+
+version: 0.1.0

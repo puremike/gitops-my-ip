@@ -1,0 +1,18 @@
+using sealed-secret with kubeseal:
+
+install kubeseal: 
+
+
+Add the Bitnami repo:
+
+```helm repo add bitnami https://charts.bitnami.com/bitnami```
+
+Update your Helm repos: ```helm repo update```
+
+Install: 
+```helm install sealed-secrets-controller bitnami/sealed-secrets \
+--namespace kube-system \
+--set service.type=ClusterIP \
+--create-namespace```
+
+

@@ -1,0 +1,10 @@
+apiVersion: v2
+
+name: my-ip-client
+
+description: A Helm chart for deploying My-IP client application
+
+type: application
+
+version: 0.1.0
+

@@ -1,0 +1,10 @@
+microservice:
+  name: my-ip-postgres
+  namespace: my-ip-app
+  replicas: 1
+  component: database
+  appName: my-ip-app
+  
+workload:
+  image: postgres:13.22-alpine3.22
+  port: 5432
