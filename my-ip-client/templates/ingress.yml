@@ -13,6 +13,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: exampleService
+                name: {{ .Values.microservice.name }}
                 port:
                   number: {{ .Values.workload.containerPort }}
