@@ -1,0 +1,23 @@
+alertmanager:
+  config:
+    global:
+      smtp_smarthost: 'smtp.gmail.com:587'
+      smtp_from: 'newarchi15@gmail.com'
+      smtp_auth_username: 'newarchi15@gmail.com'
+      smtp_auth_password: 
+        smtp_auth_password:
+          valueFrom:
+            secretKeyRef:
+              name: alertmanager-smtp
+              key: password
+    receivers:
+      - name: 'email-notifications'
+        email_configs:
+          - to: 'recipient@example.com'
+            send_resolved: true
+    route:
+      receiver: 'email-notifications'
+      group_by: ['alertname']
+      group_wait: 30s
+      group_interval: 5m
+      repeat_interval: 1h
