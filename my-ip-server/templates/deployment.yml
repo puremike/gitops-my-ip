@@ -22,11 +22,11 @@ spec:
         image: {{ .Values.workload.image }}
         resources:
           requests:
-            cpu: "200m"
-            memory: "128Mi"
+            cpu: "70m"
+            memory: "100Mi"
           limits:
-            cpu: "210m"
-            memory: "200Mi"
+            cpu: "100m"
+            memory: "128Mi"
         ports:
         - containerPort: {{ .Values.workload.containerPort }}
         envFrom:

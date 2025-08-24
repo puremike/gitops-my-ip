@@ -6,10 +6,10 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    #- host: www.example.com
+    #- host: "_"
     - http:
         paths:
-          - path: /
+          - path: /v1
             pathType: Prefix
             backend:
               service:
