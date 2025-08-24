@@ -9,3 +9,4 @@ microservice:
 workload:
   image: postgres:13.22-alpine3.22
   port: 5432
+  containerPort: 5432

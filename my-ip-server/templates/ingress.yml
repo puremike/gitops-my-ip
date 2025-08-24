@@ -15,4 +15,4 @@ spec:
               service:
                 name: {{ .Values.microservice.name }}
                 port:
-                  number: {{ .Values.workload.containerPort }}
+                  number: {{ .Values.workload.port }}

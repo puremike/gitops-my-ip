@@ -8,5 +8,6 @@ microservice:
 
 workload:
   image: scophee/my-ip-server:1.4
+  port: 8100
   containerPort: 8100
   

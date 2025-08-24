@@ -28,7 +28,7 @@ spec:
           - configMapRef:
               name: "{{ .Values.microservice.name }}-config"
         ports:
-        - containerPort: {{ .Values.workload.port }}
+        - containerPort: {{ .Values.workload.containerPort }}
         volumeMounts:
         - name: "{{ .Values.microservice.name }}-persistent-storage"
           mountPath: /var/lib/postgresql/data
