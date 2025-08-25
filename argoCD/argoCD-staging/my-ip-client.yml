@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: my-ip-server
+  name: my-ip-client
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: https://github.com/puremike/gitops-my-ip.git
     targetRevision: main
-    path: my-ip-server
+    path: my-ip-client
     helm:
       valueFiles:
-        - values-argo.yaml
+        - values-staging.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: my-ip-app

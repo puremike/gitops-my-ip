@@ -1,3 +1,4 @@
+---
 apiVersion: monitoring.coreos.com/v1
 kind: PrometheusRule
 metadata:
@@ -7,7 +8,7 @@ spec:
   groups:
     - name: deployment.rules
       rules:
-        - alert: DeploymentDown
+        - alert: FrontendDeploymentDown
           expr: kube_deployment_status_replicas_available{deployment="my-ip-client"} == 0
           for: 5m
           labels:
@@ -16,7 +17,7 @@ spec:
             summary: "Frontend deployment is down"
             description: "No replicas of frontend deployment are available."
             
-        - alert: DeploymentDown
+        - alert: BackendDeploymentDown
           expr: kube_deployment_status_replicas_available{deployment="my-ip-server"} == 0
           for: 5m
           labels:
@@ -24,3 +25,32 @@ spec:
           annotations:
             summary: "Backend deployment is down"
             description: "No replicas of backend deployment are available."
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: node-exporter
+  namespace: monitoring
+  labels:
+    app: node-exporter
+spec:
+  selector:
+    app: node-exporter
+  ports:
+    - name: metrics
+      port: 9100
+      targetPort: 9100
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: node-exporter
+  namespace: monitoring
+spec:
+  selector:
+    matchLabels:
+      app: node-exporter
+  endpoints:
+    - port: metrics
+      interval: 15s
+
