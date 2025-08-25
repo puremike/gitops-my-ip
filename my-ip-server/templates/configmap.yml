@@ -4,8 +4,8 @@ metadata:
   name: "{{ .Values.microservice.name }}-config"
   namespace: {{ .Values.microservice.namespace }}
 data:
-    PORT: {{ .Values.appEnvironment.PORT }}
-    APP_ENV: {{ .Values.appEnvironment.APP_ENV }}
-    FRONTEND_URL: {{ .Values.appEnvironment.FRONTEND_URL }}
+    PORT: "{{ .Values.appEnvironment.PORT }}"
+    APP_ENV: "{{ .Values.appEnvironment.APP_ENV }}"
+    FRONTEND_URL: "{{ .Values.appEnvironment.FRONTEND_URL }}"
 
 

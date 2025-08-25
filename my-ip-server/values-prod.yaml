@@ -1,17 +1,17 @@
 microservice:
   name: my-ip-server
   namespace: my-ip-app
-  replicas: 2
+  replicas: 3
   component: server
   appName: my-ip-app
   secretName: my-ip-server-secret
 
 workload:
-  image: scophee/my-ip-server:1.5
+  image: scophee/my-ip-server:1.1
   port: 8100
   containerPort: 8100
 
 appEnvironment:
-  FRONTEND_URL: 'http://my-ip-app-prod.example.com'
+  FRONTEND_URL: 'http://abf7b38b52e1b474f9f7bf9805fc6ac4-1567268293.us-east-1.elb.amazonaws.com'
   APP_ENV: 'prod'
   PORT: '8100'
