@@ -4,6 +4,8 @@ kind: PrometheusRule
 metadata:
   name: deployment-alerts
   namespace: monitoring
+  labels:
+    release: kube-prometheus-stack
 spec:
   groups:
     - name: deployment.rules
