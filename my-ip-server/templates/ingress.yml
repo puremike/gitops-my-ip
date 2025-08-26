@@ -3,6 +3,9 @@ kind: Ingress
 metadata:
   name: "{{ .Values.microservice.name }}-ingress"
   namespace: {{ .Values.microservice.namespace }}
+  annotations:
+    nginx.ingress.kubernetes.io/from-to-first-ip: "true"
+    nginx.ingress.kubernetes.io/use-forwarded-headers: "true"
 spec:
   ingressClassName: nginx
   rules:

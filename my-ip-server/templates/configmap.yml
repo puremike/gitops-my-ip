@@ -7,5 +7,6 @@ data:
     PORT: "{{ .Values.appEnvironment.PORT }}"
     APP_ENV: "{{ .Values.appEnvironment.APP_ENV }}"
     FRONTEND_URL: "{{ .Values.appEnvironment.FRONTEND_URL }}"
+    TRUSTED_PROXIES: '192.168.58.0/24'
 
 

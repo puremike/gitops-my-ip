@@ -6,12 +6,13 @@ microservice:
   appName: my-ip-app
 
 workload:
-  image: scophee/my-ip-server:1.2
+  image: scophee/my-ip-server:1.4
   port: 8100
   containerPort: 8100
 
 appEnvironment:
   FRONTEND_URL: 'http://127.0.0.1:3030'
+  TRUSTED_PROXIES: ''
   APP_ENV: 'dev'
   PORT: '8100'
   
