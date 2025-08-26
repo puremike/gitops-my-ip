@@ -6,12 +6,12 @@ microservice:
   appName: my-ip-app
 
 workload:
-  image: scophee/my-ip-server:1.4
+  image: scophee/my-ip-server:1.5
   port: 8100
   containerPort: 8100
 
 appEnvironment:
-  FRONTEND_URL: 'http://abf7b38b52e1b474f9f7bf9805fc6ac4-1567268293.us-east-1.elb.amazonaws.com'
-  TRUSTED_PROXIES: '192.168.58.0/24'
+  FRONTEND_URL: 'http://k8s-myipapp-myipclie-2fca833e9c-1412247168.us-east-1.elb.amazonaws.com'
+  TRUSTED_PROXIES: '192.168.0.0/16'
   APP_ENV: 'prod'
   PORT: '8100'
