@@ -1,5 +1,4 @@
 # Ignore a single secret file by its full path from the repository root
-my-ip-server/templates/secret.yml
-my-ip-postgres/templates/secret.yml
+my-ip-server/secret.yml
 kube_prom/secret.yml
 some.txt

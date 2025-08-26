@@ -4,7 +4,6 @@ microservice:
   replicas: 2
   component: server
   appName: my-ip-app
-  secretName: my-ip-server-secret
 
 workload:
   image: scophee/my-ip-server:1.2
