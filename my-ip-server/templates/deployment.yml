@@ -33,4 +33,4 @@ spec:
          - configMapRef:
              name: "{{ .Values.microservice.name }}-config"
          - secretRef:
-             name: {{ .Values.microservice.secretName }}
+             name: "{{ .Values.microservice.name }}-secret"
