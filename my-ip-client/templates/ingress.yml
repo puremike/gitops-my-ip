@@ -14,6 +14,7 @@ metadata:
     alb.ingress.kubernetes.io/healthy-threshold-count: "3"
     alb.ingress.kubernetes.io/unhealthy-threshold-count: "2"
     alb.ingress.kubernetes.io/group.name: my-shared-group1
+    alb.ingress.kubernetes.io/group.order: "20"
 spec:
   ingressClassName: alb
   rules:
