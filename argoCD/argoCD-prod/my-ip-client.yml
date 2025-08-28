@@ -17,6 +17,7 @@ spec:
     namespace: my-ip-app
   syncPolicy:
     automated:
+      enabled: true
       prune: true
       selfHeal: true
     syncOptions:

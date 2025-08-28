@@ -11,7 +11,7 @@ workload:
   containerPort: 8100
 
 appEnvironment:
-  FRONTEND_URL: 'http://k8s-myipapp-myipclie-2fca833e9c-1412247168.us-east-1.elb.amazonaws.com'
+  FRONTEND_URL: 'http://k8s-mysharedgroup1-4ecbb1e167-1920773454.us-east-1.elb.amazonaws.com'
   TRUSTED_PROXIES: '192.168.0.0/16'
   APP_ENV: 'prod'
   PORT: '8100'
